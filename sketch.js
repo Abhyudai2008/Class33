@@ -49,7 +49,7 @@ function setup(){
 function draw(){
     if(backgroundImg)
         background(backgroundImg);
-    
+      log6 = new Log(230,180,80,PI/2)
         noStroke();
         textSize(35)
         fill("white")
@@ -76,7 +76,7 @@ function draw(){
 
     bird.display();
     platform.display();
-    //log6.display();
+    log6.display();
     slingshot.display();    
 }
 
@@ -105,7 +105,7 @@ async function getBackgroundImg(){
     var datetime = responseJSON.datetime;
     var hour = datetime.slice(11,13);
     
-    if(hour>=0600 && hour<=1900){
+    if(hour>=06 && hour<=19){
         bg = "sprites/bg1.png";
     }
     else{
